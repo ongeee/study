@@ -47,7 +47,7 @@ for i in range(N):
     
     print('')
 
-# 7-5 (1157)
+# 7-5 (1157) [RE]
 D = input().upper()
 D = list(D)
 
