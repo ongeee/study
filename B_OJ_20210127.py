@@ -2,7 +2,7 @@
 
 # 20210127
 
-# 7-6 (1152) {REs}
+# 7-6 (1152) [RE]
 S = input().split()
 S = list(S)
 
@@ -21,4 +21,3 @@ B = int("".join(B))
 
 if (A>B): print(A)
 else: print(B)
-    
