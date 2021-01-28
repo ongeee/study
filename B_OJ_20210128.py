@@ -18,35 +18,29 @@ for i in (S):
 
 print(time)
 
-# 7-9 (2941)
+# 7-9 (2941) [RE]
 S = input()
-S = list(S)
 
-# 7-10 (1316)
-N = input()
-N = int(N)
+R = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
 
-num = 0
-for i in range(N):
+for i in R:
+
+    S = S.replace(i, 'r')
+
+print(len(S))
+
+####################  7-10 (1316) [RE]  ####################
+cnt = 0
+
+for _ in range(int(input())):
     
-    S = input()
-    S = list(S)
-    
-    for j in range(len(S)):
+    x = input()
+    cnt += 1
+    for k in set(x):
         
-        if (j==0):
-            if (S[j]==S[j+1]):
-                pass
-            elif (S[j] in S[j+1:]):
-                break
-            
-            
-        elif (S[j]==S[j+1]) or (S[j]==S[j-1]):
-            pass
-        elif (S[j] in S[j+1:]):
+        if len(set(x[x.index(k): x.rindex(k) + 1])) != 1:
+            cnt -= 1
             break
-        
-        num = num + 1
-            
-print(num)
+
+print(cnt)
     
