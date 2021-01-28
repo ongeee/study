@@ -8,7 +8,7 @@ S = list(S)
 
 print(len(S))
 
-# 7-7 (2908)
+# 7-7 (2908) [RE]
 A, B = input().split()
 A = list(A)
 B = list(B)
