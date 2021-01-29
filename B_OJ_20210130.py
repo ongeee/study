@@ -3,72 +3,141 @@
 # 20210130
 
 # 8-1 (1712) [RE]
-    
-# 8-2 (2292)
-N = input()
-    
-N = int(N)
-
-# 8-3 (1193)
-N = input()
-    
-N = int(N)
-
-# 8-4 (2869) [RE]
-
-# 8-5 (10250) [RE]
-
-# 8-6 (2775)
-N = input()
-
-N = int(N)
-
-A, B = input().split()
+A, B, C = input().split()
 
 A = int(A)
 B = int(B)
+C = int(C)
 
-# 8-7 (2839) [RE]
+if (B >= C):
+    print('-1')
+    
+else: 
+    print(int(A // (C-B))+1)
+    
+# 8-2 (2292)
+
+# 8-3 (1193)
+
+# 8-4 (2869) [RE]
+A, B, V = input().split()
+
+A = int(A)
+B = int(B)
+V = int(V)
+
+if ((V-B) % (A-B) != 0):
+    print(((V-B) // (A-B))+1)
+    
+else:
+    print(((V-B) // (A-B)))
+
+# 8-5 (10250) [RE]
 N = input()
+
 N = int(N)
 
-V = []
+for i in range(N):
+    
+    H, W, N = input().split()
+    
+    H = int(H)
+    W = int(W)
+    N = int(N)
+    
+    K = N % H
+    
+    if K ==0:
+        floor = H
+        num = (N // H)
+    
+    else:
+        floor = K
+        num = (N // H) + 1
+        
+    
+    if (num<10):
+        num = '0' + str(num)
+        
+    floor = str(floor)
+    num = str(num)
+    
+    print(floor + num)
 
-five_1 = N // 5
-three_1 = (N % 5) // 3
-Five_three_1 = five_1 + three_1
+# 8-6 (2775)
 
-if ((N % 5) % 3 == 0):
-    V.append(Five_three_1)
-
-three_2 = N // 3
-five_2 = (N % 3) // 5
-Three_five_1 = five_2 + three_2 
-
-if ((N % 3) % 5 == 0):
-    V.append(Three_five_1)
-
-eight_3 = N // 8
-
-five_3_1 = (N % 8) // 5
-three_3_1 = ((N % 8) % 5) // 3 
-Five_three_2 = five_3_1 + three_3_1 + 2
-
-if (((N % 8) % 5) % 3  == 0):
-    V.append(Five_three_2)
-
-three_3_2 = (N % 8) // 3
-five_3_2 = ((N % 8) % 3) // 5
-Three_five_2 = five_3_2 + three_3_2 + 2
-
-if (((N % 8) % 3) % 5  == 0):
-    V.append(Three_five_2)
-
-if (len(V) == 0):
-    print('-1')
-else :
-    print(min(V))
+# 8-7 (2839)
 
 # 8-8 (10757)
 
 # 8-9 (1011) 
+    # 8-1 (1712) [RE]
+A, B, C = input().split()
+
+A = int(A)
+B = int(B)
+C = int(C)
+
+if (B >= C):
+    print('-1')
+    
+else: 
+    print(int(A // (C-B))+1)
+    
+# 8-2 (2292)
+
+# 8-3 (1193)
+
+# 8-4 (2869) [RE]
+A, B, V = input().split()
+
+A = int(A)
+B = int(B)
+V = int(V)
+
+if ((V-B) % (A-B) != 0):
+    print(((V-B) // (A-B))+1)
+    
+else:
+    print(((V-B) // (A-B)))
+
+# 8-5 (10250) [RE]
+N = input()
+
+N = int(N)
+
+for i in range(N):
+    
+    H, W, N = input().split()
+    
+    H = int(H)
+    W = int(W)
+    N = int(N)
+    
+    K = N % H
+    
+    if K ==0:
+        floor = H
+        num = (N // H)
+    
+    else:
+        floor = K
+        num = (N // H) + 1
+        
+    
+    if (num<10):
+        num = '0' + str(num)
+        
+    floor = str(floor)
+    num = str(num)
+    
+    print(floor + num)
+
+# 8-6 (2775)
+
+# 8-7 (2839)
+
+# 8-8 (10757)
+
+# 8-9 (1011) 
+    
